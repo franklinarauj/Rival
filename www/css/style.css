@@ -6,30 +6,6 @@ ion-icon {
   padding-left: 2px;
 }
 
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 24px;
-}
-
-table {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-table>tbody>tr>td {
-  padding: 8px;
-  line-height: 1.4;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
-}
-
-table>tbody>tr:nth-of-type(odd) {
-  background-color: #f9f9f9;
-}
-
 img {
   max-width: 32px;
   max-height: 32px;
@@ -39,4 +15,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
+}
+
+.buttons {
+  text-align: center;
 }
