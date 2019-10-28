@@ -1,0 +1,96 @@
+angular.module('app')
+
+  .controller('appCtrl', function ($scope, $ionicModal, $ionicSideMenuDelegate, Projetos) {
+
+    // carrega e inicializa todos os projetos
+    $scope.projetos = Projetos.all();
+
+    // pega o último ativo ou o primeiro projeto
+    $scope.projetoAtivo = $scope.projetos[Projetos.getUltimoAtivoIndex()];
+
+    // chamado para excluir um projeto
+    $scope.escolhido = {
+      mostrarExcluir: false
+    };
+    $scope.deletarProjeto = function (projeto) {
+      $scope.projetos.splice($scope.projetos.indexOf(projeto), 1);
+    };
+
+    // chamado para selecionar o projeto fornecido
+    $scope.selecionarProjeto = function (projeto, index) {
+      $scope.projetoAtivo = projeto;
+      Projetos.setUltimoAtivoIndex(index);
+      $ionicSideMenuDelegate.toggleLeft(false);
+    };
+
+    $scope.alternarProjetos = function () {
+      $ionicSideMenuDelegate.toggleLeft();
+    };
+
+    // cria e carrega o modal de nova opção
+    $ionicModal.fromTemplateUrl('templates/nova-opcao.html', function (modal) {
+      $scope.opcaoModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // chamada para quando o formulário é enviado
+    $scope.criaOpcao = function (opcao) {
+      if (!$scope.projetoAtivo || !opcao) {
+        return;
+      }
+      $scope.projetoAtivo.opcoes.push({
+        title: opcao.title
+      });
+      $scope.opcaoModal.hide();
+
+      // meio ineficiente, mas salva os projetos
+      Projetos.save($scope.projetos);
+      opcao.title = "";
+    };
+
+    // abre o modal de opções
+    $scope.novaOpcao = function () {
+      $scope.opcaoModal.show();
+    };
+
+    // fecha o novo modal de opções
+    $scope.fechaNovaOpcao = function () {
+      $scope.opcaoModal.hide();
+    };
+
+    // cria e carrega o modal de novo projeto
+    $ionicModal.fromTemplateUrl('templates/novo-projeto.html', function (modal) {
+      $scope.projetoModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // chamada para quando o formulário de projeto é enviado
+    $scope.criaProjeto = function (projeto) {
+      $scope.selecionarProjeto($scope.projetos.length - 1);
+      if (!$scope.projetoAtivo || !projeto) {
+        return;
+      }
+      $scope.projetos.push({
+        title: projeto.title
+      });
+      
+      // meio ineficiente, mas salva os projetos
+      Projetos.save($scope.projetos);
+      
+      // fecha o novo modal de projetos
+      $scope.projetoModal.hide();
+    }
+
+    // abre o modal de projetos
+    $scope.novoProjeto = function () {
+      $scope.projetoModal.show();
+    };
+
+    // fecha o novo modal de projetos
+    $scope.fechaNovoProjeto = function () {
+      $scope.projetoModal.hide();
+    };
+
+  })

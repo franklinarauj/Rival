@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Nova Opção</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services/projetosAPIService.js"></script>
+    <script src="js/controllers/appCtrl.js"></script>
+    <script src="js/controllers/menuCtrl.js"></script>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <script src="templates/tela-inicial.html"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+    <!-- TELA DE NOVA OPÇÃO-->
+    <div class="modal">
+        <!-- barra de cabeçalho do modal -->
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Nova Opção</h1>
+            <div class="buttons">
+                <button class="button button-clear button-assertive" ng-click="fechaNovaOpcao()">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </button>
+            </div>
+
+        </ion-header-bar>
+        <!-- área de conteúdo do modal -->
+        <ion-content>
+            <form ng-submit="criaOpcao(opcao)">
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="O que deseja adicionar?" ng-model="opcao.title">
+                    </label>
+                </div>
+                <div class="padding">
+                    <button type="submit" class="button button-block button-balanced">Criar Opção</button>
+                </div>
+            </form>
+        </ion-content>
+    </div>
+</body>
+
+</html>
