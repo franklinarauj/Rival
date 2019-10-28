@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Tela Inicial</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services/projetosAPIService.js"></script>
+    <script src="js/controllers/appCtrl.js"></script>
+    <script src="js/controllers/menuCtrl.js"></script>
+    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+    <script src="templates/tela-inicial.html"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+
+    <ion-side-menus>
+        <!-- conteúdo central -->
+        <ion-side-menu-content>
+            <ion-header-bar class="bar-light">
+                <div class="buttons">
+                    <button class="button-dark button-icon" ng-click="alternarProjetos()" type="text/ng-template">
+                        <ion-icon name="switch"></ion-icon>
+                    </button>
+                </div>
+                <!-- imagem da logo -->
+                <img ng-src="img/logo.png" ng-click="selecionarProjeto($index)" />
+                <!-- botão de nova opçao -->
+                <div class="buttons">
+                    <button class="button-dark button-icon" ng-click="novaOpcao()">
+                        <i class="icon ion-compose"></i>
+                    </button>
+                </div>
+            </ion-header-bar>
+            <ion-content scroll="true">
+                <ion-list>
+                    <ion-item ng-repeat="opcao in projetoAtivo.opcoes">
+                        {{opcao.title}}
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+            <div class="bar bar-footer bar-dark">
+                <div class="title">{{projetoAtivo.title}}</div>
+            </div>
+        </ion-side-menu-content>
+
+</body>
+
+</html>

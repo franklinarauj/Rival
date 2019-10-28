@@ -19,6 +19,8 @@
   <script src="js/controllers/appCtrl.js"></script>
   <script src="js/controllers/menuCtrl.js"></script>
   <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+  <script src="templates/tela-inicial.html"></script>
+  <script src="templates/nova-opcao.html"></script>
 
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
@@ -36,7 +38,7 @@
           </button>
         </div>
         <!-- imagem da logo -->
-        <img ng-src="img/logo.png" ng-click="selecionarProjeto($index)" />
+        <img ng-src="img/logo.png" ng-click="selecionarProjeto($index)"/>
         <!-- botão de nova opçao -->
         <div class="buttons">
           <button class="button-dark button-icon" ng-click="novaOpcao()">
@@ -83,65 +85,6 @@
       </ion-content>
     </ion-side-menu>
   </ion-side-menus>
-
-  <!-- TELA DE NOVA OPÇÃO-->
-  <script id="nova-opcao.html" type="text/ng-template">
-    <div class="modal">
-      <!-- barra de cabeçalho do modal -->
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Nova Opção</h1>
-        <div class="buttons">
-          <button class="button button-clear button-assertive" ng-click="fechaNovaOpcao()">
-            <ion-icon name="arrow-back"></ion-icon>
-          </button>
-        </div>
-
-      </ion-header-bar>
-      <!-- área de conteúdo do modal -->
-      <ion-content>
-        <form ng-submit="criaOpcao(opcao)">
-          <div class="list">
-            <label class="item item-input">
-              <input type="text" placeholder="O que deseja adicionar?" ng-model="opcao.title">
-            </label>
-          </div>
-          <div class="padding">
-            <button type="submit" class="button button-block button-balanced">Criar Opção</button>
-          </div>
-        </form>
-      </ion-content>
-    </div>
-  </script>
-
-  <!-- TELA DE NOVA OPÇÃO-->
-  <script id="novo-projeto.html" type="text/ng-template">
-    <div class="modal">
-      <!-- barra de cabeçalho do modal -->
-      <ion-header-bar class="bar-stable">
-          <div class="buttons">
-              <button class="button button-clear button-assertive" ng-click="fechaNovoProjeto()">
-                <ion-icon name="arrow-back"></ion-icon>
-              </button>
-            </div>
-        <h1 class="title">Novo Projeto</h1>
-
-      </ion-header-bar>
-      <!-- área de conteúdo do modal -->
-      <ion-content>
-        <form ng-submit="criaProjeto(projeto)">
-          <div class="list">
-            <label class="item item-input">
-              <input type="text" placeholder="Qual nome do projeto?" ng-model="projeto.title">
-            </label>
-          </div>
-          <div class="padding">
-            <button type="submit" class="button button-block button-balanced">Criar Projeto</button>
-          </div>
-        </form>
-      </ion-content>
-    </div>
-  </script>
-
 </body>
 
 </html>

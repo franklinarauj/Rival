@@ -17,5 +17,15 @@ angular.module('app')
         url: '/e-sports',
         templateUrl: 'templates/e-sports.html',
       })
+      //quando for a pagina de nova opcao
+      .state('nova-opcao', {
+        url: '/nova-opcao',
+        templateUrl: 'templates/nova-opcao.html',
+      })
+      //quando for a pagina de novo projeto
+      .state('novo-projeto', {
+        url: '/novo-projeto',
+        templateUrl: 'templates/novo-projeto.html',
+      })
     $urlRouterProvider.otherwise('')
   });

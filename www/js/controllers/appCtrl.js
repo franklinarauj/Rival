@@ -28,7 +28,7 @@ angular.module('app')
     };
 
     // cria e carrega o modal de nova opção
-    $ionicModal.fromTemplateUrl('nova-opcao.html', function (modal) {
+    $ionicModal.fromTemplateUrl('templates/nova-opcao.html', function (modal) {
       $scope.opcaoModal = modal;
     }, {
       scope: $scope,
@@ -60,7 +60,7 @@ angular.module('app')
     };
 
     // cria e carrega o modal de novo projeto
-    $ionicModal.fromTemplateUrl('novo-projeto.html', function (modal) {
+    $ionicModal.fromTemplateUrl('templates/novo-projeto.html', function (modal) {
       $scope.projetoModal = modal;
     }, {
       scope: $scope,
