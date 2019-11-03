@@ -10,6 +10,11 @@ body {
   background-color: #f8f8f8;
 }
 
+div {
+  margin: 0;
+  padding: 0;
+}
+
 img.logo {
   max-width: 320px;
   max-height: 320px;
@@ -23,10 +28,12 @@ img.logo {
   justify-content: center;
 }
 
-h2.sport {
+h2.inicial {
   margin-top: auto;
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   cursor: pointer;
+  font-size: 25px;
 }
 
 .esport {
@@ -74,11 +81,56 @@ div.direita {
   max-height: 320px;
   margin-left: auto;
   margin-right: auto;
-  text-align:justify;
+  text-align: justify;
 }
 
-h2.ajuda{
-  background: yellow; 
+h2.ajuda {
+  background: yellow;
   text-align: center;
   font-size: 28px;
+}
+
+.modalidade {
+  width: 100%;
+  border-radius: 30px;
+  border: 1.5px solid #000000;
+}
+
+.modalidadeNome {
+  text-align: center;
+  font-size: 9px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.col {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.col-top {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.col-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.col-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
 }
