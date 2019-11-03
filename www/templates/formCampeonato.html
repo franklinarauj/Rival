@@ -43,7 +43,30 @@
     <!-- área de conteúdo do modal -->
     <div>
       <ion-content>
-        
+        <div class="list">
+
+        </div>
+        <div class="list">
+
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="Nome do Campeonato">
+            </label>
+            <button class="button button-small" ng-click="abreCampeonatos()" type="text/ng-template">
+              Adicionar
+            </button>
+          </div>
+
+          <ion-list>
+
+            <ion-checkbox ng-model="filter.red">Equipe 1</ion-checkbox>
+            <ion-checkbox ng-model="filter.yellow">Equipe 2</ion-checkbox>
+            <ion-checkbox ng-model="filter.pink">Equipe 3</ion-checkbox>
+            <ion-checkbox ng-model="filter.blue">Fase de grupos</ion-checkbox>
+            <ion-checkbox ng-model="filter.orange">Eliminatorias</ion-checkbox>
+
+          </ion-list>
+        </div>
       </ion-content>
     </div>
   </div>
