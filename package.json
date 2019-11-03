@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "An Ionic project",
   "devDependencies": {
-    "@ionic/v1-toolkit": "^1.0.0",
+    "@ionic/v1-toolkit": "1.0.22",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.1.1",

@@ -6,17 +6,79 @@ ion-icon {
   padding-left: 2px;
 }
 
-img {
-  max-width: 32px;
-  max-height: 32px;
-  width: auto;
-  height: auto;
-  margin-top: auto;
+body {
+  background-color: #f8f8f8;
+}
+
+img.logo {
+  max-width: 320px;
+  max-height: 320px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
+  display: block;
+}
+
+.holder {
+  display: flex;
+  justify-content: center;
+}
+
+h2.sport {
+  margin-top: auto;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.esport {
+  width: 100px;
+  margin-left: 10px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sport {
+  width: 100px;
+  margin-left: 15px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.esquerda {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.direita {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons {
   text-align: center;
+}
+
+.footer {
+  max-width: 32px;
+  max-height: 32px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+}
+
+.ajuda {
+  display: block;
+  max-width: 320px;
+  max-height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:justify;
+}
+
+h2.ajuda{
+  background: yellow; 
+  text-align: center;
+  font-size: 28px;
 }

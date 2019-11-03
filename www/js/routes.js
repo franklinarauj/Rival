@@ -4,8 +4,8 @@ angular.module('app')
       //quando for a pagina inicial
       .state('telaInicial', {
         url: '/',
-        templateUrl: 'templates/tela-inicial.html',
-        controller: 'menuCtrl'
+        templateUrl: 'index.html',
+        controller: 'appCtrl'
       })
       //quando for a pagina de esportes
       .state('esportes', {
@@ -26,6 +26,11 @@ angular.module('app')
       .state('novo-projeto', {
         url: '/novo-projeto',
         templateUrl: 'templates/novo-projeto.html',
+      })
+      //quando for a pagina de ajuda
+      .state('ajuda', {
+        url: '/ajuda',
+        templateUrl: 'templates/ajuda.html',
       })
     $urlRouterProvider.otherwise('')
   });

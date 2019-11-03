@@ -27,6 +27,23 @@ angular.module('app')
       $ionicSideMenuDelegate.toggleLeft();
     };
 
+    // cria e carrega o modal de ajuda
+    $ionicModal.fromTemplateUrl('templates/ajuda.html', function (modal) {
+      $scope.ajudaModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de opções
+    $scope.abreAjuda = function () {
+      $scope.ajudaModal.show();
+    };
+
+    // fecha o novo modal de opções
+    $scope.fechaAjuda = function () {
+      $scope.ajudaModal.hide();
+    };
+
     // cria e carrega o modal de nova opção
     $ionicModal.fromTemplateUrl('templates/nova-opcao.html', function (modal) {
       $scope.opcaoModal = modal;
@@ -75,10 +92,10 @@ angular.module('app')
       $scope.projetos.push({
         title: projeto.title
       });
-      
+
       // meio ineficiente, mas salva os projetos
       Projetos.save($scope.projetos);
-      
+
       // fecha o novo modal de projetos
       $scope.projetoModal.hide();
     }

@@ -1,0 +1,60 @@
+<body ng-app="app" ng-controller="appCtrl">
+
+  <ion-side-menus>
+    <!-- conteúdo central -->
+    <ion-side-menu-content>
+      <ion-header-bar class="bar-light">
+        <div class="buttons">
+          <button class="button-dark button-icon" ng-click="alternarProjetos()" type="text/ng-template">
+            <ion-icon name="switch"></ion-icon>
+          </button>
+        </div>
+        <!-- imagem da logo -->
+        <img ng-src="img/logo.png" ng-click="selecionarProjeto($index)"/>
+        <!-- botão de nova opçao -->
+        <div class="buttons">
+          <button class="button-dark button-icon" ng-click="novaOpcao()">
+            <i class="icon ion-compose"></i>
+          </button>
+        </div>
+      </ion-header-bar>
+      <ion-content scroll="true">
+        <ion-list>
+          <ion-item ng-repeat="opcao in projetoAtivo.opcoes">
+            {{opcao.title}}
+          </ion-item>
+        </ion-list>
+      </ion-content>
+      <div class="bar bar-footer bar-dark">
+        <div class="title">{{projetoAtivo.title}}</div>
+      </div>
+    </ion-side-menu-content>
+    <!-- menu da esquerda -->
+    <ion-side-menu side="left">
+      <ion-header-bar class="bar bar-header bar-stable">
+        <div class="buttons">
+          <button class="button button-icon" ng-click="escolhido.mostrarExcluir = !escolhido.mostrarExcluir">
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </div>
+        <h1 class="title">Opções</h1>
+        <div class="buttons">
+          <button class="button button-icon" ng-click="novoProjeto()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </div>
+      </ion-header-bar>
+      <ion-content scroll="true">
+        <ion-list show-delete="escolhido.mostrarExcluir">
+          <ion-item ng-repeat="projeto in projetos" ng-click="selecionarProjeto(projeto, $index)"
+            ng-class="{active: projetoAtivo == projeto}">
+            {{projeto.title}}
+            <ion-delete-button ng-click="deletarProjeto(projeto)">
+              <ion-icon name="close"></ion-icon>
+            </ion-delete-button>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>
+</body>
