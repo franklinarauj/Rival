@@ -225,4 +225,37 @@ angular.module('app')
       $scope.formCampeonatoModal.hide();
     };
 
+    // cria e carrega o modal de formulario tabela
+    $ionicModal.fromTemplateUrl('templates/formTabela.html', function (modal) {
+      $scope.formTabelaModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de formulario tabela
+    $scope.abreFormTabela = function () {
+      $scope.formTabelaModal.show();
+    };
+
+    // fecha o novo modal de formulario tabela
+    $scope.fechaFormTabela = function () {
+      $scope.formTabelaModal.hide();
+    };
+
+    // cria e carrega o modal de formulario eliminatoria
+    $ionicModal.fromTemplateUrl('templates/formEliminatoria.html', function (modal) {
+      $scope.formEliminatoriaModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de formulario eliminatoria
+    $scope.abreFormEliminatoria = function () {
+      $scope.formEliminatoriaModal.show();
+    };
+
+    // fecha o novo modal de formulario eliminatoria
+    $scope.fechaFormEliminatoria = function () {
+      $scope.formEliminatoriaModal.hide();
+    };
   })
