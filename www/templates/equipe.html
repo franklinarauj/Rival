@@ -31,7 +31,7 @@
       <!-- barra de cabeçalho do modal -->
       <ion-header-bar class="bar-stable">
         <div class="buttons">
-          <button class="button button-clear button-assertive" ng-click="fechaEquipe()">
+          <button class="button button-clear button-assertive" ng-click="fechaEquipe() || fechaFormEquipe()">
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
@@ -43,11 +43,6 @@
     <!-- área de conteúdo do modal -->
     <div>
         <ion-content>
-            <div class="card">
-              <div class="item item-text-wrap">
-                Nome da Equipe
-              </div>
-            </div>
 
             <div class="card">
                 <div class="item item-text-wrap">
