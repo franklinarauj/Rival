@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>Formulario Campeonato</title>
+  <title>Campeonatos</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="css/style.css">
@@ -35,7 +35,7 @@
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
-        <h1 class="title">Formulario Campeonato</h1>
+        <h1 class="title">Formulário Campeonato</h1>
         <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
           <ion-icon name="help-circle-outline"></ion-icon>
         </button>
@@ -43,9 +43,6 @@
     <!-- área de conteúdo do modal -->
     <div>
       <ion-content>
-        <div class="list">
-
-        </div>
         <div class="list">
 
           <div class="item item-input-inset">
@@ -58,14 +55,13 @@
           </div>
 
           <ion-list>
-
             <ion-checkbox ng-model="filter.red">Equipe 1</ion-checkbox>
             <ion-checkbox ng-model="filter.yellow">Equipe 2</ion-checkbox>
             <ion-checkbox ng-model="filter.pink">Equipe 3</ion-checkbox>
             <ion-checkbox ng-model="filter.blue">Fase de grupos</ion-checkbox>
             <ion-checkbox ng-model="filter.orange">Eliminatorias</ion-checkbox>
-
           </ion-list>
+
         </div>
       </ion-content>
     </div>
