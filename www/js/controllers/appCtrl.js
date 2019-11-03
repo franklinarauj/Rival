@@ -1,31 +1,6 @@
 angular.module('app')
 
-  .controller('appCtrl', function ($scope, $ionicModal, $ionicSideMenuDelegate, Projetos) {
-
-    // carrega e inicializa todos os projetos
-    $scope.projetos = Projetos.all();
-
-    // pega o último ativo ou o primeiro projeto
-    $scope.projetoAtivo = $scope.projetos[Projetos.getUltimoAtivoIndex()];
-
-    // chamado para excluir um projeto
-    $scope.escolhido = {
-      mostrarExcluir: false
-    };
-    $scope.deletarProjeto = function (projeto) {
-      $scope.projetos.splice($scope.projetos.indexOf(projeto), 1);
-    };
-
-    // chamado para selecionar o projeto fornecido
-    $scope.selecionarProjeto = function (projeto, index) {
-      $scope.projetoAtivo = projeto;
-      Projetos.setUltimoAtivoIndex(index);
-      $ionicSideMenuDelegate.toggleLeft(false);
-    };
-
-    $scope.alternarProjetos = function () {
-      $ionicSideMenuDelegate.toggleLeft();
-    };
+  .controller('appCtrl', function ($scope, $ionicModal) {
 
     // cria e carrega o modal de ajuda
     $ionicModal.fromTemplateUrl('templates/ajuda.html', function (modal) {
@@ -78,70 +53,38 @@ angular.module('app')
       $scope.esportsModal.hide();
     };
 
-    // cria e carrega o modal de nova opção
-    $ionicModal.fromTemplateUrl('templates/nova-opcao.html', function (modal) {
-      $scope.opcaoModal = modal;
+    // cria e carrega o modal de e-sports1
+    $ionicModal.fromTemplateUrl('templates/e-sports-1.html', function (modal) {
+      $scope.esportsModal1 = modal;
     }, {
       scope: $scope,
     });
 
-    // chamada para quando o formulário é enviado
-    $scope.criaOpcao = function (opcao) {
-      if (!$scope.projetoAtivo || !opcao) {
-        return;
-      }
-      $scope.projetoAtivo.opcoes.push({
-        title: opcao.title
-      });
-      $scope.opcaoModal.hide();
-
-      // meio ineficiente, mas salva os projetos
-      Projetos.save($scope.projetos);
-      opcao.title = "";
+    // abre o modal de e-sports1
+    $scope.abreEsports1 = function () {
+      $scope.esportsModal1.show();
     };
 
-    // abre o modal de opções
-    $scope.novaOpcao = function () {
-      $scope.opcaoModal.show();
+    // fecha o novo modal de e-sports1
+    $scope.fechaEsports1 = function () {
+      $scope.esportsModal1.hide();
     };
 
-    // fecha o novo modal de opções
-    $scope.fechaNovaOpcao = function () {
-      $scope.opcaoModal.hide();
-    };
-
-    // cria e carrega o modal de novo projeto
-    $ionicModal.fromTemplateUrl('templates/novo-projeto.html', function (modal) {
-      $scope.projetoModal = modal;
+    // cria e carrega o modal de esportes1
+    $ionicModal.fromTemplateUrl('templates/esportes-1.html', function (modal) {
+      $scope.esportesModal1 = modal;
     }, {
       scope: $scope,
     });
 
-    // chamada para quando o formulário de projeto é enviado
-    $scope.criaProjeto = function (projeto) {
-      $scope.selecionarProjeto($scope.projetos.length - 1);
-      if (!$scope.projetoAtivo || !projeto) {
-        return;
-      }
-      $scope.projetos.push({
-        title: projeto.title
-      });
-
-      // meio ineficiente, mas salva os projetos
-      Projetos.save($scope.projetos);
-
-      // fecha o novo modal de projetos
-      $scope.projetoModal.hide();
-    }
-
-    // abre o modal de projetos
-    $scope.novoProjeto = function () {
-      $scope.projetoModal.show();
+    // abre o modal de esportes1
+    $scope.abreEsportes1 = function () {
+      $scope.esportesModal1.show();
     };
 
-    // fecha o novo modal de projetos
-    $scope.fechaNovoProjeto = function () {
-      $scope.projetoModal.hide();
+    // fecha o novo modal de esportes1
+    $scope.fechaEsportes1 = function () {
+      $scope.esportesModal1.hide();
     };
 
   })
