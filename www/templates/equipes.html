@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>E-Sports</title>
+  <title>Equipes</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="css/style.css">
@@ -25,17 +25,17 @@
 </head>
 
 <body ng-app="app" ng-controller="appCtrl">
-  <!-- TELA DE E-Sports-->
+  <!-- TELA DE EQUIPES-->
   <div class="modal">
     <div>
       <!-- barra de cabeçalho do modal -->
       <ion-header-bar class="bar-stable">
         <div class="buttons">
-          <button class="button button-clear button-assertive" ng-click="fechaEsports1()">
+          <button class="button button-clear button-assertive" ng-click="fechaEquipes()">
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
-        <h1 class="title">E-Sports</h1>
+        <h1 class="title">Equipes</h1>
         <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
           <ion-icon name="help-circle-outline"></ion-icon>
         </button>
@@ -43,15 +43,13 @@
     <!-- área de conteúdo do modal -->
     <div>
       <ion-content>
-        <div class="conteudo">
-          <button class="button" style="background: #ffffff" ng-click="abreEquipes()" type="text/ng-template">
-            <ion-icon name="people"></ion-icon> Equipes
-          </button>
-          <button class="button" style="background: #ffffff" ng-click="abreEquipes()" type="text/ng-template">
-            <ion-icon name="medal"></ion-icon> Campeonatos
-          </button>
-        </div>
+
       </ion-content>
+      <div class="bar bar-footer">
+        <button class="add" ng-click="abreFomularioEquipe()" type="text/ng-template">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </div>
     </div>
   </div>
 </body>
