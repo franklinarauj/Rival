@@ -19,23 +19,6 @@ angular.module('app')
       $scope.ajudaModal.hide();
     };
 
-    // cria e carrega o modal de esportes
-    $ionicModal.fromTemplateUrl('templates/esportes.html', function (modal) {
-      $scope.esportesModal = modal;
-    }, {
-      scope: $scope,
-    });
-
-    // abre o modal de esportes
-    $scope.abreEsportes = function () {
-      $scope.esportesModal.show();
-    };
-
-    // fecha o novo modal de esportes
-    $scope.fechaEsportes = function () {
-      $scope.esportesModal.hide();
-    };
-
     // cria e carrega o modal de e-sports
     $ionicModal.fromTemplateUrl('templates/e-sports.html', function (modal) {
       $scope.esportsModal = modal;
@@ -51,6 +34,23 @@ angular.module('app')
     // fecha o novo modal de e-sports
     $scope.fechaEsports = function () {
       $scope.esportsModal.hide();
+    };
+
+    // cria e carrega o modal de esportes
+    $ionicModal.fromTemplateUrl('templates/esportes.html', function (modal) {
+      $scope.esportesModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de esportes
+    $scope.abreEsportes = function () {
+      $scope.esportesModal.show();
+    };
+
+    // fecha o novo modal de esportes
+    $scope.fechaEsportes = function () {
+      $scope.esportesModal.hide();
     };
 
     // cria e carrega o modal de e-sports1
