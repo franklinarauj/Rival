@@ -87,6 +87,41 @@ angular.module('app')
       $scope.esportesModal1.hide();
     };
 
+    // cria e carrega o modal de equipes
+    $ionicModal.fromTemplateUrl('templates/equipes.html', function (modal) {
+      $scope.equipesModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de equipes
+    $scope.abreEquipes = function () {
+      $scope.equipesModal.show();
+    };
+
+    // fecha o novo modal de equipes
+    $scope.fechaEquipes = function () {
+      $scope.equipesModal.hide();
+    };
+
+    // cria e carrega o modal de formulario equipe
+    $ionicModal.fromTemplateUrl('templates/formEquipe.html', function (modal) {
+      $scope.formEquipeModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de formulario equipe
+    $scope.abreFormEquipe = function () {
+      $scope.formEquipeModal.show();
+    };
+
+
+    // fecha o novo modal de formulario equipe
+    $scope.fechaFormEquipe = function () {
+      $scope.formEquipeModal.hide();
+    };
+
     // cria e carrega o modal de campeonatos
     $ionicModal.fromTemplateUrl('templates/campeonatos.html', function (modal) {
       $scope.campeonatosModal = modal;
