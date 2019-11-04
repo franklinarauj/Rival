@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>Formulario Campeonato</title>
+  <title>Formulario Eliminatoria</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="css/style.css">
@@ -43,8 +43,66 @@
     <!-- área de conteúdo do modal -->
     <div>
       <ion-content>
-        
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Desafiante 1
+            </div>
+            <select>
+              <option selected>Equipe 1</option>
+              <option>Equipe 2</option>
+              <option>Equipe 3</option>
+              <option>Equipe 4</option>
+            </select>
+          </label>
+
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="Placar da Equipe desafiante 1">
+            </label>
+          </div>
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Desafiante 2
+            </div>
+            <select>
+              <option selected>Equipe 1</option>
+              <option>Equipe 2</option>
+              <option>Equipe 3</option>
+              <option>Equipe 4</option>
+            </select>
+          </label>
+
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="Placar da Equipe desafiante 2">
+            </label>
+          </div>
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Equipe vencedora
+            </div>
+            <select>
+              <option selected>Equipe 1</option>
+              <option>Equipe 2</option>
+              <option>Equipe 3</option>
+              <option>Equipe 4</option>
+            </select>
+          </label>
+
+        </div>
+
       </ion-content>
+
+      <div class="bar bar-footer">
+        <button class="add" ng-click="abreEliminatoria()" type="text/ng-template">
+          <ion-icon name="arrow-round-forward"></ion-icon>
+        </button>
+      </div>
+
     </div>
   </div>
 </body>

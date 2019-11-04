@@ -45,22 +45,38 @@
       <ion-content>
         <div class="card">
           <div class="item item-text-wrap">
+            Nome do Campeonato
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="item item-text-wrap">
             Nome da Equipe 1
           </div>
         </div>
 
         <div class="card">
-            <div class="item item-text-wrap">
-              Nome da Equipe 2
-            </div>
+          <div class="item item-text-wrap">
+            Nome da Equipe 2
           </div>
+        </div>
 
-          <div class="card">
-            <div class="item item-text-wrap">
-              Nome da Equipe 3
-            </div>
+        <div class="card">
+          <div class="item item-text-wrap">
+            Nome da Equipe 3
           </div>
+        </div>
       </ion-content>
+      <div class="bar bar-footer">
+        <button class="add" ng-click="abreFormTabela()" type="text/ng-template">
+          Fase de grupos
+          <ion-icon name="add"></ion-icon>
+        </button>
+        <button class="add" ng-click="abreFormEliminatoria()" type="text/ng-template">
+          Eliminatorias
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </div>
     </div>
   </div>
 </body>
