@@ -18,6 +18,7 @@
     "gulp-sass": "^3.1.0"
   },
   "dependencies": {
+    "@ionic/app-scripts": "2.1.4",
     "@ionic/v1-toolkit": "1.0.22",
     "body-parser": "^1.19.0",
     "cordova-android": "^8.0.0",
