@@ -7,7 +7,7 @@
   },
   "engines": {
     "node": "12.11.1"
-  }
+  },
   "devDependencies": {
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
