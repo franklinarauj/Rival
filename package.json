@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "An Ionic project",
   "scripts": {
-    "start": "ionic serve",
+    "start": "ionic serve"
   },
   "devDependencies": {
     "cordova-plugin-device": "^2.0.2",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "cordova-android": "^8.0.0",
-    "@ionic/v1-toolkit": "1.0.22",
+    "@ionic/v1-toolkit": "1.0.22"
   },
   "cordova": {
     "plugins": {
