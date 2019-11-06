@@ -43,23 +43,17 @@
     <!-- área de conteúdo do modal -->
     <div>
       <ion-content>
-        <div P class="blocktext">
-          <button class="button button-stable" ng-click="abreCampeonato()" type="text/ng-template">
-            Campeonato1
-          </button>
-        </div>
-          <button class="button button-stable" ng-click="abreCampeonato()" type="text/ng-template">
-            Campeonato2
-          </button>
-          <button class="button button-stable" ng-click="abreCampeonato()" type="text/ng-template">
-            Campeonato3
-          </button>
-          <button class="button button-stable" ng-click="abreFormCampeonato()" type="text/ng-template">
-            Adicionar campeonato
-            <ion-icon name="add"></ion-icon>
-          </button>
+        <div class="row">
+          <button class="button button-stable" ng-click="abreCampeonato()" type="text/ng-template">Champions</button>
+          <button class="button button-stable" ng-click="abreCampeonato()" type="text/ng-template">Libertadores</button>
+          <button class="button button-stable" ng-click="abreCampeonato()" type="text/ng-template">Mundial</button>
         </div>
       </ion-content>
+    </div>
+    <div class="bar bar-footer">
+      <button class="button button-stable" ng-click="abreFormCampeonato()" type="text/ng-template">
+        <ion-icon name="add"></ion-icon>
+      </button>
     </div>
   </div>
 </body>

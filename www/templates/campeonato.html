@@ -31,7 +31,7 @@
       <!-- barra de cabeçalho do modal -->
       <ion-header-bar class="bar-stable">
         <div class="buttons">
-          <button class="button button-clear button-assertive" ng-click="fechaCampeonato()">
+          <button class="button button-clear button-assertive" ng-click="fechaCampeonato() || fechaFormCampeonato()">
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
@@ -44,37 +44,18 @@
     <div>
       <ion-content>
         <div class="card">
-          <div class="item item-text-wrap">
-            Nome do Campeonato
-          </div>
+          <div class="item item-text-wrap">Nome do Campeonato</div>
         </div>
-
         <div class="card">
-          <div class="item item-text-wrap">
-            Nome da Equipe 1
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="item item-text-wrap">
-            Nome da Equipe 2
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="item item-text-wrap">
-            Nome da Equipe 3
-          </div>
+          <div class="item item-text-wrap">Nome da Equipe 1</div>
+          <div class="item item-text-wrap">Nome da Equipe 2</div>
+          <div class="item item-text-wrap">Nome da Equipe 3</div>
         </div>
       </ion-content>
       <div class="bar bar-footer">
-        <button class="add" ng-click="abreFormTabela()" type="text/ng-template">
-          Fase de grupos
-          <ion-icon name="add"></ion-icon>
+        <button class="button button-stable" ng-click="abreTabelas()" type="text/ng-template"> Fase de Grupos
         </button>
-        <button class="add" ng-click="abreFormEliminatoria()" type="text/ng-template">
-          Eliminatorias
-          <ion-icon name="add"></ion-icon>
+        <button class="button button-stable" ng-click="abreEliminatorias()" type="text/ng-template"> Eliminatórias
         </button>
       </div>
     </div>

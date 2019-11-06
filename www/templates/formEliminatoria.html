@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>Formulario Eliminatoria</title>
+  <title>Formulário Eliminatória</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="css/style.css">
@@ -35,7 +35,7 @@
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
-        <h1 class="title">Formulario Eliminatoria</h1>
+        <h1 class="title">Formulário Eliminatória</h1>
         <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
           <ion-icon name="help-circle-outline"></ion-icon>
         </button>
@@ -44,65 +44,50 @@
     <div>
       <ion-content>
         <div class="list">
-
           <label class="item item-input item-select">
-            <div class="input-label">
-              Desafiante 1
-            </div>
-            <select>
+            <div class="input-label">Desafiante 1</div>
+            <select class="opcoes">
               <option selected>Equipe 1</option>
               <option>Equipe 2</option>
               <option>Equipe 3</option>
               <option>Equipe 4</option>
             </select>
           </label>
-
           <div class="item item-input-inset">
             <label class="item-input-wrapper">
-              <input type="text" placeholder="Placar da Equipe desafiante 1">
+              <input type="text" placeholder="Placar da Equipe 1">
             </label>
           </div>
-
           <label class="item item-input item-select">
-            <div class="input-label">
-              Desafiante 2
-            </div>
-            <select>
+            <div class="input-label">Desafiante 2</div>
+            <select class="opcoes">
               <option selected>Equipe 1</option>
               <option>Equipe 2</option>
               <option>Equipe 3</option>
               <option>Equipe 4</option>
             </select>
           </label>
-
           <div class="item item-input-inset">
             <label class="item-input-wrapper">
-              <input type="text" placeholder="Placar da Equipe desafiante 2">
+              <input type="text" placeholder="Placar da Equipe 2">
             </label>
           </div>
-
           <label class="item item-input item-select">
-            <div class="input-label">
-              Equipe vencedora
-            </div>
-            <select>
+            <div class="input-label">Equipe vencedora</div>
+            <select class="opcoes">
               <option selected>Equipe 1</option>
               <option>Equipe 2</option>
               <option>Equipe 3</option>
               <option>Equipe 4</option>
             </select>
           </label>
-
         </div>
-
       </ion-content>
-
       <div class="bar bar-footer">
-        <button class="add" ng-click="abreEliminatoria()" type="text/ng-template">
+        <button class="button button-stable" ng-click="abreEliminatoria()" type="text/ng-template">
           <ion-icon name="arrow-round-forward"></ion-icon>
         </button>
       </div>
-
     </div>
   </div>
 </body>

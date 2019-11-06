@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>Formulário Fase de Grupo</title>
+  <title>Eliminatória</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="css/style.css">
@@ -25,17 +25,17 @@
 </head>
 
 <body ng-app="app" ng-controller="appCtrl">
-  <!-- TELA DE Formulario de Tabela-->
+  <!-- TELA DE Campeonato-->
   <div class="modal">
     <div>
       <!-- barra de cabeçalho do modal -->
       <ion-header-bar class="bar-stable">
         <div class="buttons">
-          <button class="button button-clear button-assertive" ng-click="fechaFormTabela()">
+          <button class="button button-clear button-assertive" ng-click="fechaEliminatoria() || fechaFormEliminatoria()">
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
-        <h1 class="title">Formulário Tabela</h1>
+        <h1 class="title">Eliminatória</h1>
         <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
           <ion-icon name="help-circle-outline"></ion-icon>
         </button>
@@ -45,11 +45,6 @@
       <ion-content>
 
       </ion-content>
-      <div class="bar bar-footer">
-        <button class="button button-stable" ng-click="abreTabela()" type="text/ng-template">
-          <ion-icon name="arrow-round-forward"></ion-icon>
-        </button>
-      </div>
     </div>
   </div>
 </body>

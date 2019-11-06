@@ -174,23 +174,6 @@ angular.module('app')
       $scope.campeonatoModal.hide();
     };
 
-    // cria e carrega o modal de tabela
-    $ionicModal.fromTemplateUrl('templates/tabela.html', function (modal) {
-      $scope.tabelaModal = modal;
-    }, {
-      scope: $scope,
-    });
-
-    // abre o modal de tabela
-    $scope.abreTabela = function () {
-      $scope.tabelaModal.show();
-    };
-
-    // fecha o novo modal de tabela
-    $scope.fechaTabela = function () {
-      $scope.tabelaModal.hide();
-    };
-
     // cria e carrega o modal de eliminatoria
     $ionicModal.fromTemplateUrl('templates/eliminatoria.html', function (modal) {
       $scope.eliminatoriaModal = modal;
@@ -206,6 +189,23 @@ angular.module('app')
     // fecha o novo modal de eliminatoria
     $scope.fechaEliminatoria = function () {
       $scope.eliminatoriaModal.hide();
+    };
+
+    // cria e carrega o modal de eliminatorias
+    $ionicModal.fromTemplateUrl('templates/eliminatorias.html', function (modal) {
+      $scope.eliminatoriasModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de eliminatorias
+    $scope.abreEliminatorias = function () {
+      $scope.eliminatoriasModal.show();
+    };
+
+    // fecha o novo modal de eliminatorias
+    $scope.fechaEliminatorias = function () {
+      $scope.eliminatoriasModal.hide();
     };
 
     // cria e carrega o modal de formulario campeonato
@@ -225,6 +225,23 @@ angular.module('app')
       $scope.formCampeonatoModal.hide();
     };
 
+    // cria e carrega o modal de tabelas
+    $ionicModal.fromTemplateUrl('templates/tabelas.html', function (modal) {
+      $scope.tabelasModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de tabela
+    $scope.abreTabelas = function () {
+      $scope.tabelasModal.show();
+    };
+
+    // fecha o novo modal de tabela
+    $scope.fechaTabelas = function () {
+      $scope.tabelasModal.hide();
+    };
+
     // cria e carrega o modal de formulario tabela
     $ionicModal.fromTemplateUrl('templates/formTabela.html', function (modal) {
       $scope.formTabelaModal = modal;
@@ -240,6 +257,23 @@ angular.module('app')
     // fecha o novo modal de formulario tabela
     $scope.fechaFormTabela = function () {
       $scope.formTabelaModal.hide();
+    };
+
+    // cria e carrega o modal de tabela
+    $ionicModal.fromTemplateUrl('templates/tabela.html', function (modal) {
+      $scope.tabelaModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de tabela
+    $scope.abreTabela = function () {
+      $scope.tabelaModal.show();
+    };
+
+    // fecha o novo modal de tabela
+    $scope.fechaTabela = function () {
+      $scope.tabelaModal.hide();
     };
 
     // cria e carrega o modal de formulario eliminatoria
