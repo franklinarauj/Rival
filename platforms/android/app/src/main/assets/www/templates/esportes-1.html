@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Esportes</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/services/projetosAPIService.js"></script>
+  <script src="js/controllers/appCtrl.js"></script>
+  <script src="js/controllers/menuCtrl.js"></script>
+  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+  <!-- TELA DE Esportes-->
+  <div class="modal">
+    <div>
+      <!-- barra de cabeçalho do modal -->
+      <ion-header-bar class="bar-stable">
+        <div class="buttons">
+          <button class="button button-clear button-assertive" ng-click="fechaEsportes1()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </div>
+        <h1 class="title">Esportes</h1>
+        <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </button>
+    </div>
+    <!-- área de conteúdo do modal -->
+    <div>
+      <ion-content>
+        <div class="conteudo">
+          <button class="button" style="background: #ffffff" ng-click="abreEquipes()" type="text/ng-template">
+            <ion-icon name="people"></ion-icon> Equipes
+          </button>
+          <button class="button" style="background: #ffffff" ng-click="abreCampeonatos()" type="text/ng-template">
+            <ion-icon name="medal"></ion-icon> Campeonatos
+          </button>
+        </div>
+      </ion-content>
+    </div>
+  </div>
+</body>
+
+</html>

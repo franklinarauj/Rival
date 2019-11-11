@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>E-Sports</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/services/projetosAPIService.js"></script>
+  <script src="js/controllers/appCtrl.js"></script>
+  <script src="js/controllers/menuCtrl.js"></script>
+  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
+  <!-- TELA DE E-Sports-->
+  <div class="modal">
+    <div>
+      <!-- barra de cabeçalho do modal -->
+      <ion-header-bar class="bar-stable">
+        <div class="buttons">
+          <button class="button button-clear button-assertive" ng-click="fechaEsports()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </div>
+        <h1 class="title">E-Sports</h1>
+        <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </button>
+    </div>
+    <!-- área de conteúdo do modal -->
+    <div>
+      <ion-content>
+        <div class="row">
+          <div class="col col-top">
+            <img class="modalidade" title="Futebol" ng-src="img/soccer.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Futebol</h2>
+            <img class="modalidade" title="Futebol" ng-src="img/soccer.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Futebol</h2>
+          </div>
+          <div class="col col-center">
+            <img class="modalidade" title="Voleibol" ng-src="img/volleyball.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Voleibol</h2>
+            <img class="modalidade" title="Voleibol" ng-src="img/volleyball.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Voleibol</h2>
+          </div>
+          <div class="col col-center">
+            <img class="modalidade" title="Basquete" ng-src="img/basket.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Basquete</h2>
+            <img class="modalidade" title="Basquete" ng-src="img/basket.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Basquete</h2>
+          </div>
+          <div class="col col-bottom">
+            <img class="modalidade" title="Handbol" ng-src="img/handball.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Handbol</h2>
+            <img class="modalidade" title="Handbol" ng-src="img/handball.png" ng-click="abreEsports1()"
+              type="text/ng-template" />
+            <h2 class="modalidadeNome">Handbol</h2>
+          </div>
+        </div>
+      </ion-content>
+    </div>
+  </div>
+</body>
+
+</html>

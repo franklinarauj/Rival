@@ -1,0 +1,33 @@
+<body ng-app="app" ng-controller="appCtrl">
+
+    <ion-side-menus>
+        <!-- conteúdo central -->
+        <ion-side-menu-content>
+            <ion-header-bar class="bar-light">
+                <div class="buttons">
+                    <button class="button-dark button-icon" ng-click="alternarProjetos()" type="text/ng-template">
+                        <ion-icon name="switch"></ion-icon>
+                    </button>
+                </div>
+                <!-- imagem da logo -->
+                <img ng-src="img/logo.png" ng-click="selecionarProjeto($index)" />
+                <!-- botão de nova opçao -->
+                <div class="buttons">
+                    <button class="button-dark button-icon" ng-click="novaOpcao()">
+                        <i class="icon ion-compose"></i>
+                    </button>
+                </div>
+            </ion-header-bar>
+            <ion-content scroll="true">
+                <ion-list>
+                    <ion-item ng-repeat="opcao in projetoAtivo.opcoes">
+                        {{opcao.title}}
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+            <div class="bar bar-footer bar-dark">
+                <div class="title">{{projetoAtivo.title}}</div>
+            </div>
+        </ion-side-menu-content>
+
+</body>
