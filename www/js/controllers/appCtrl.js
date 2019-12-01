@@ -292,4 +292,22 @@ angular.module('app')
     $scope.fechaFormEliminatoria = function () {
       $scope.formEliminatoriaModal.hide();
     };
+
+    // cria e carrega o modal de formValores
+    $ionicModal.fromTemplateUrl('templates/formValores.html', function (modal) {
+      $scope.formValoresModal = modal;
+    }, {
+      scope: $scope,
+    });
+
+    // abre o modal de formValores
+    $scope.abreFormValores = function () {
+      $scope.formValoresModal.show();
+    };
+
+    // fecha o novo modal de formValores
+    $scope.fechaFormValores = function () {
+      $scope.formValoresModal.hide();
+    };
+
   })

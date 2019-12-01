@@ -125,6 +125,21 @@ h2.ajuda {
   justify-content: space-around;
 }
 
+.col-50h{
+  border-radius: 30px;
+  background-color: rgb(209, 209, 209);
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  justify-content: space-around;
+}
+
 .col-10{
   margin: auto;
   margin-top: 20px;
@@ -198,4 +213,5 @@ h2.ajuda {
 .opcoes option {
   text-align: center;
 }
+
 

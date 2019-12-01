@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>Fase de Grupos</title>
+  <title>Formulario de Valores</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="css/style.css">
@@ -25,17 +25,17 @@
 </head>
 
 <body ng-app="app" ng-controller="appCtrl">
-  <!-- TELA DE Formulario de Tabela-->
+  <!-- TELA DE Formulario de Valores-->
   <div class="modal">
     <div>
       <!-- barra de cabeçalho do modal -->
       <ion-header-bar class="bar-stable">
         <div class="buttons">
-          <button class="button button-clear button-assertive" ng-click="fechaTabelas()">
+          <button class="button button-clear button-assertive" ng-click="fechaFormValores()">
             <ion-icon name="arrow-back"></ion-icon>
           </button>
         </div>
-        <h1 class="title">Fase de Grupos</h1>
+        <h1 class="title">Formulario Valores</h1>
         <button class="button button-clear button-dark" ng-click="abreAjuda()" type="text/ng-template">
           <ion-icon name="help-circle-outline"></ion-icon>
         </button>
@@ -43,52 +43,42 @@
     <!-- área de conteúdo do modal -->
     <div>
       <ion-content>
-          <div class="card">
-            <div class="item item-text-wrap">Nome do Campeonato</div>
-          </div>
-          <div class="card">
-            <div class="item item-text-wrap">Tabela</div>
-          </div>
-
         <div class="row">
-          <div class="col-10h">Equipe</div>
-          <div class="col-10h">PTS</div>
-          <div class="col-10h">JG</div>
-          <div class="col-10h">VT</div>
-          <div class="col-10h">DT</div>
+          <div class="col-50h">Pontos</div>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Pontos">
+          </label>
         </div>
         <div class="row">
-          <div class="col-10">Equipe1</div>
-          <div class="col-10">12</div>
-          <div class="col-10">4</div>
-          <div class="col-10">4</div>
-          <div class="col-10">0</div>
+          <div class="col-50h">Jogos</div>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Jogos">
+          </label>
         </div>
         <div class="row">
-          <div class="col-10">Equipe2</div>
-          <div class="col-10">9</div>
-          <div class="col-10">4</div>
-          <div class="col-10">3</div>
-          <div class="col-10">1</div>
+          <div class="col-50h">Vitorias</div>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Vitorias">
+          </label>
         </div>
         <div class="row">
-          <div class="col-10">Equipe3</div>
-          <div class="col-10">3</div>
-          <div class="col-10">4</div>
-          <div class="col-10">1</div>
-          <div class="col-10">3</div>
+          <div class="col-50h">Derrotas</div>
         </div>
-        <div class="row">
-          <div class="col-10">Equipe4</div>
-          <div class="col-10">0</div>
-          <div class="col-10">4</div>
-          <div class="col-10">0</div>
-          <div class="col-10">4</div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Derrotas">
+          </label>
         </div>
       </ion-content>
       <div class="bar bar-footer">
-        <button class="button button-stable" ng-click="abreFormTabela()" type="text/ng-template">
-          <ion-icon name="add"></ion-icon>
+        <button class="button button-stable" ng-click="abreTabelas() || fechaFormValores() || fechaFormTabela()" type="text/ng-template">
+          <ion-icon name="arrow-round-forward"></ion-icon>
         </button>
       </div>
     </div>
