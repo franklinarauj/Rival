@@ -9,6 +9,7 @@
     "node": "12.11.1"
   },
   "devDependencies": {
+    "@ionic/v1-toolkit": "1.0.22",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.1.1",
@@ -22,7 +23,6 @@
   },
   "dependencies": {
     "@ionic/app-scripts": "2.1.4",
-    "@ionic/v1-toolkit": "1.0.22",
     "body-parser": "^1.19.0",
     "cordova-android": "^8.1.0",
     "cors": "^2.8.5",
