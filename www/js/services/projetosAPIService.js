@@ -1,5 +1,8 @@
 angular.module('app')
 
+// EXEMPLO PARA USAR LOCAL STORAGE
+
+
   .factory('Projetos', function () {
     return {
       all: function () {
