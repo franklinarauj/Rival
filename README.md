@@ -1,1 +1,1 @@
-![RIVAL](https://prnt.sc/u2hvad)
+<img src=”https://prnt.sc/u2hvad”>
